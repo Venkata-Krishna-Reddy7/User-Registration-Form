@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enhanced Registration Form</title>
+   <link rel="stylesheet" href="../STYLES/style1.css">
+</head>
+<body>
+<div class="container">
+  <h2>Create Your Account</h2>
+  <form id="registrationForm">
+    <div class="form-group">
+      <input type="text" id="fname" placeholder=" " required>
+      <label for="fname" class="floating-label">First Name</label>
+      <div class="validation-message" id="fname-error">Please enter your first name</div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="lname" placeholder=" " required>
+      <label for="lname" class="floating-label">Last Name</label>
+      <div class="validation-message" id="lname-error">Please enter your last name</div>
+    </div>
+
+    <div class="form-group">
+      <input type="email" id="email" placeholder=" " required>
+      <label for="email" class="floating-label">Email</label>
+      <div class="validation-message" id="email-error">Please enter a valid email address</div>
+    </div>
+
+    <div class="form-group">
+      <input type="tel" id="phone" placeholder=" " pattern="[0-9]{10}" required>
+      <label for="phone" class="floating-label">Phone Number</label>
+      <div class="validation-message" id="phone-error">Please enter a valid 10-digit phone number</div>
+    </div>
+
+    <div class="form-group">
+      <input type="date" id="dob" required>
+      <label for="dob" class="floating-label">Date of Birth</label>
+      <div class="validation-message" id="dob-error">Please select your date of birth</div>
+    </div>
+
+    <div class="form-group">
+      <p style="margin-bottom: 8px; color: #666;">Gender</p>
+      <div class="gender-container">
+        <label class="gender-option">
+          <input type="radio" name="gender" value="male" required>
+          <span>Male</span>
+        </label>
+        <label class="gender-option">
+          <input type="radio" name="gender" value="female">
+          <span>Female</span>
+        </label>
+        <label class="gender-option">
+          <input type="radio" name="gender" value="other">
+          <span>Other</span>
+        </label>
+      </div>
+      <div class="validation-message" id="gender-error">Please select your gender</div>
+    </div>
+    <div class="form-group">
+      <div class="file-input-container">
+        <input type="file" id="photo" class="custom-file-input">
+        <label for="photo" class="floating-label">Profile Photo (Optional)</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea id="address" placeholder=" "></textarea>
+      <label for="address" class="floating-label">Address (Optional)</label>
+    </div>
+    <div class="form-group">
+      <input type="password" id="password" placeholder=" " required minlength="6">
+      <label for="password" class="floating-label">Password</label>
+      <div class="password-strength" id="password-strength"></div>
+      <div class="validation-message" id="password-error">Password must be at least 6 characters</div>
+    </div>
+    <div class="form-group">
+      <input type="password" id="confirm" placeholder=" " required>
+      <label for="confirm" class="floating-label">Confirm Password</label>
+      <div class="validation-message" id="confirm-error">Passwords do not match</div>
+    </div>
+    <button type="submit">Create Account</button>
+    <div class="success-message" id="success-message">Registration successful!</div>
+      <script src="../SCRIPT/script.js"></script>
+  </form>
+</div>
+</body>
+</html>

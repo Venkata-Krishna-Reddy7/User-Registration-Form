@@ -1,0 +1,183 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  padding: 20px;
+}
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+textarea,
+.custom-file-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 16px;
+}
+input:focus,
+textarea:focus,
+.custom-file-input:focus {
+  border-color: #ff7f50;
+  box-shadow: 0 0 0 2px rgba(255, 127, 80, 0.2);
+}
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+label.floating-label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+  background: #fff;
+  padding: 0 4px;
+}
+input:focus + label.floating-label,
+input:not(:placeholder-shown) + label.floating-label,
+textarea:focus + label.floating-label,
+textarea:not(:placeholder-shown) + label.floating-label,
+.custom-file-input:focus + label,
+.custom-file-input.has-file + label {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  color: #ff7f50;
+}
+input[type="date"] + label.floating-label {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  color: #ff7f50;
+  background: #fff;
+  padding: 0 4px;
+}
+.gender-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.gender-option {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 8px 0;
+  background-color: #f9f9f9;
+}
+.gender-option input[type="radio"] {
+  display: none;
+}
+.gender-option span {
+  display: block;
+  padding: 5px 0;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.gender-option input[type="radio"]:checked + span {
+  background-color: #ff7f50;
+  color: white;
+}
+.file-input-container {
+  position: relative;
+  overflow: hidden;
+}
+.custom-file-input {
+  cursor: pointer;
+}
+.custom-file-input::file-selector-button {
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.custom-file-input::file-selector-button:hover {
+  background: #e0e0e0;
+}
+.password-strength {
+  height: 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  transition: 0.3s;
+  width: 0%;
+}
+.strength-weak {
+  background-color: #ff4d4d;
+  width: 33%;
+}
+.strength-medium {
+  background-color: #ffa64d;
+  width: 66%;
+}
+.strength-strong {
+  background-color: #2ecc71;
+  width: 100%;
+}
+.validation-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff7f50;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+button:hover {
+  background: #e86e3d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.success-message {
+  text-align: center;
+  color: #2ecc71;
+  margin-top: 15px;
+  display: none;
+}
